@@ -1,0 +1,253 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Botanical harvest palette shared by the shadcn primitives and app chrome. */
+:root {
+  --radius: 0.875rem;
+  --background: #e9f2ec;
+  --foreground: #102318;
+  --card: #f6fbf8;
+  --card-foreground: #102318;
+  --popover: #f6fbf8;
+  --popover-foreground: #102318;
+  --primary: #1b4332;
+  --primary-foreground: #f6fbf8;
+  --secondary: #eab308;
+  --secondary-foreground: #102318;
+  --muted: #dce9df;
+  --muted-foreground: #496352;
+  --accent: #d97706;
+  --accent-foreground: #102318;
+  --destructive: #b42318;
+  --border: #1b4332;
+  --input: #789383;
+  --ring: #d97706;
+  --chart-1: #1b4332;
+  --chart-2: #eab308;
+  --chart-3: #4d8b63;
+  --chart-4: #d97706;
+  --chart-5: #7c9f84;
+  --sidebar: #e9f2ec;
+  --sidebar-foreground: #102318;
+  --sidebar-primary: #1b4332;
+  --sidebar-primary-foreground: #f6fbf8;
+  --sidebar-accent: #eab308;
+  --sidebar-accent-foreground: #102318;
+  --sidebar-border: #1b4332;
+  --sidebar-ring: #d97706;
+}
+
+.dark {
+  --background: #e9f2ec;
+  --foreground: #102318;
+  --card: #f6fbf8;
+  --card-foreground: #102318;
+  --popover: #f6fbf8;
+  --popover-foreground: #102318;
+  --primary: #1b4332;
+  --primary-foreground: #f6fbf8;
+  --secondary: #eab308;
+  --secondary-foreground: #102318;
+  --muted: #dce9df;
+  --muted-foreground: #496352;
+  --accent: #d97706;
+  --accent-foreground: #102318;
+  --destructive: #b42318;
+  --border: #1b4332;
+  --input: #789383;
+  --ring: #d97706;
+  --chart-1: #1b4332;
+  --chart-2: #eab308;
+  --chart-3: #4d8b63;
+  --chart-4: #d97706;
+  --chart-5: #7c9f84;
+  --sidebar: #e9f2ec;
+  --sidebar-foreground: #102318;
+  --sidebar-primary: #1b4332;
+  --sidebar-primary-foreground: #f6fbf8;
+  --sidebar-accent: #eab308;
+  --sidebar-accent-foreground: #102318;
+  --sidebar-border: #1b4332;
+  --sidebar-ring: #d97706;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+/* ---------- Neobrutalism Minimalism utilities ---------- */
+
+.font-display {
+  font-family: "Archivo Black", "Space Grotesk", ui-sans-serif, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.nb-dots {
+  background-image: radial-gradient(#1b43321a 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.nb-border {
+  border: 1px solid #1b4332;
+}
+
+.nb-card {
+  border: 1px solid #1b4332;
+  border-radius: 1rem;
+  background: #f6fbf8;
+  box-shadow: 0 2px 6px #1023180a, 0 12px 28px -20px #10231870;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+@media (hover: hover) {
+  .nb-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px #10231812, 0 18px 34px -22px #10231890;
+  }
+}
+
+.nb-shadow-sm {
+  box-shadow: 0 2px 6px #10231812, 0 8px 18px -14px #10231880;
+}
+
+.nb-shadow-lg {
+  box-shadow: 0 8px 18px -8px #10231830, 0 20px 44px -24px #10231890;
+}
+
+.nb-press {
+  border: 1px solid #1b4332;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 5px #10231812, 0 8px 18px -14px #10231880;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.nb-press:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px #10231818, 0 15px 26px -18px #10231890;
+}
+.nb-press:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px #10231818;
+}
+.nb-press:disabled {
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.nb-press:focus-visible {
+  outline: 3px solid #eab308;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nb-card,
+  .nb-press {
+    transition-duration: 0.01ms;
+  }
+}
+
+.nb-input {
+  width: 100%;
+  border: 1px solid #789383;
+  background: #f6fbf8;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #102318;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 6px #1023180a;
+}
+.nb-input:focus {
+  outline: 3px solid #eab30880;
+  outline-offset: 2px;
+}
+.nb-input::placeholder {
+  color: #496352;
+  font-weight: 500;
+}
+
+.nb-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid #1b4332;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #f6fbf8;
+  color: #102318;
+  border-radius: 9999px;
+}
+
+/* Confidence / progress bar: flat fill inside a black frame. */
+.nb-bar {
+  border: 1px solid #1b4332;
+  border-radius: 9999px;
+  background: #f6fbf8;
+  height: 1.05rem;
+  overflow: hidden;
+}
+.nb-bar > div {
+  height: 100%;
+  background: linear-gradient(90deg, #1b4332, #4d8b63);
+  transition: width 0.4s ease;
+}
+
+/* Preserve the familiar Tailwind utility while using the botanical card tint. */
+.bg-white {
+  background-color: var(--card);
+}
